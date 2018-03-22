@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Startup</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+    <!-- My own stylesheet -->
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <body>
+    <header class="startup text-center text-white d-flex">
+      <div class="container my-auto">
+        <div class="row">
+          <div class="col-lg-12 my-auto">
+            <h1 class="text-uppercase faded">
+              <script>
+                function startTime() {
+                  var today = new Date();
+                  var h = today.getHours();
+                  var m = today.getMinutes();
+                  var s = today.getSeconds();
+                  m = checkTime(m);
+                  s = checkTime(s);
+                  document.getElementById('txt').innerHTML =
+                  h + ":" + m + ":" + s;
+                  var t = setTimeout(startTime, 500);
+                    }
+                      function checkTime(i) {
+                          if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+                          return i;
+                                    }
+              </script>
+
+                <body onload="startTime()">
+
+                  <div id="txt"></div>
+              <strong>The Start of something New!!</strong>
+            </h1>
+            <hr>
+          </div>
+          <div class="col-lg-12 my-auto">
+            <a href="index.html" class="btn btn-primary btn-xl">Come check it</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+  </body>
+
+</html>
