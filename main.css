@@ -7,7 +7,7 @@ html
 	margin: 0px;
 }
 
-.container {
+.container, .col {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -32,3 +32,20 @@ nav {
 body{
 	background: none !important;
 }
+
+#card-body{
+	background-color: rgba(255, 255, 255, 0.82);
+	width: 740px;
+
+}
+
+button{
+	
+}
+
+
+
+h4, p, .card-title{
+	text-align: center;
+}
+
