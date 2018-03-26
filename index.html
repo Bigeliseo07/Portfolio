@@ -1,93 +1,55 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>Startup</title>
 
-<head >
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
-<title>Frontpage</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<link rel="stylesheet" type="text/css" href="main.css">
-</head>
-<body>
-  <!-- menu bar -->
-  <header>
-	<nav class="navbar navbar-expand-lg navbar-dark bg">
-  <a class="navbar-brand" href="https://www.linkedin.com/in/brian-olmedo">
-    <img src="Assets/linkedinlogo.png" id="linkedin" width="20px" height="20px" alt="">
-  </a>
-   <a class="navbar-brand" href="https://https://www.facebook.com/brian.olmedo.359">
-    <img src="Assets/facebooklogo.jpg" id="fb" width="20px" height="20px" alt="">
-  </a>
-</nav>
-</nav>
-</header>
-<hr>
-  
-        <!--- Top photo -->
-  <div class= "container-fluid">
-    <div class="row align-items-start">
-      <div class="col"></div>
-      <div class="col">
-        <img class="rounded-circle float-left" src="Assets/headshot.jpg">
-      </div>
-        <div class="col"></div>
-    </div>
+    <!-- My own stylesheet -->
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <body>
+    <header class="startup text-center text-white d-flex">
+      <div class="container my-auto">
+        <div class="row">
+          <div class="col-lg-12 my-auto">
+            <h1 class="text-uppercase faded">
+              <script>
+                function startTime() {
+                  var today = new Date();
+                  var h = today.getHours();
+                  var m = today.getMinutes();
+                  var s = today.getSeconds();
+                  m = checkTime(m);
+                  s = checkTime(s);
+                  document.getElementById('txt').innerHTML =
+                  h + ":" + m + ":" + s;
+                  var t = setTimeout(startTime, 500);
+                    }
+                      function checkTime(i) {
+                          if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+                          return i;
+                                    }
+              </script>
 
-  <!-- 1st Intro Heading -->
-    <hr>
-  <div class="row align-items-start">
-    <div class="col"></div>
-    <div class="d-flex justify-content-center">
-      <div id="card-body">
-            <h4 class="card-title"> Hello, My name is Brian Olmedo</h4>
-            <p class="card-text" id="intro"> I am from New York and my passion has always been playing and working with technology and went from working at a warehouse to be a Front-End Developer! Come and check out some of my proud work!!</p> 
+                <body onload="startTime()">
+
+                  <div id="txt"></div>
+              <strong>The Start of something New!!</strong>
+            </h1>
+            <hr>
+          </div>
+          <div class="col-lg-12 my-auto">
+            <a href="index.html" class="btn btn-primary btn-xl">Come check it</a>
           </div>
         </div>
-    <div class="col"></div>
-  </div>
-  <hr>
-              <!-- projects shown -->
-  
-              <!--1st Project -->
-              <hr>
-    <div class="row align-items-start">
-      <div class= "col">   
-        <div class="card" style="width: 18rem;"> <img class="card-img-top" img src="Assets/Iggy.jpg" alt="Iggy" style="width: 250px; height: 300px; margin-left: 15px;margin-right: 15px;">
-          <div class="card-body">
-          <h5 class="card-title">Iggy's Adventure</h5>
-          <p class="card-text">A 2d Platformer made with Phaser.js, Tiled to create and make terrain, Pixlr for sprites of Iggy. </p>
-          <a href="https://www.iggy.surge.sh" class="btn btn-primary">Interact with the project</a>
-          </div>     
-        </div>
       </div>
-              <!-- 2nd Project -->
-      <div class="col">
-        <div class="card" style="width: 18rem; "> <img class="card-img-top" img src="Assets/M&Lduo.jpg" alt="Jukebox" style="width: 250px; height: 300px; margin-left: 15px;margin-right: 15px;">
-          <div class="card-body">
-          <h5 class="card-title">30 sec. Jukebox</h5>
-          <p class="card-text">Using Spotify's API to make a homemade preview of any song that spotify has to offer.</p>
-          <a href="https://www.homemdejukebox.surge.sh" class="btn btn-primary">Interact with this project</a>
-        </div>
-        </div>
-      </div>
-  </div> 
+    </header>
 
-  </div>  
-    <hr>
+  </body>
 
-  <div class="row">
-    <div class="col-lg-3"></div>
-    <div class="col-lg-6">
-     <h3 class="ending">More coming soon!</h3>
-    </div>
-    <div class="col-lg-3"></div>
-  </div>
-
-    
- 
-
- 
-</body>
 </html>
-
-
